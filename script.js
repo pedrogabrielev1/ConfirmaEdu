@@ -158,9 +158,10 @@ function normalizeIdentifier(value) {
     .replace(/\.{2,}/g, ".")
     .replace(/^[.-]+|[.-]+$/g, "");
 }
-
 function accountEmail(identifier) {
-  return `${normalizeIdentifier(identifier)}@acesso.confirmaedu.app`;
+  const projectHost = new URL(appConfig.SUPABASE_URL).hostname;
+  return `${normalizeIdentifier(identifier)}@${projectHost}`;
+}
 }
 
 function roleLabel(role) {
