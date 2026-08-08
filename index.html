@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#147a50" />
+    <meta
+      name="description"
+      content="ConfirmaEdu — controle compartilhado de refeições da Escola Estadual Professor Antônio Dantas."
+    />
+    <title>ConfirmaEdu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="supabase.js" defer></script>
+    <script src="qrcode.js" defer></script>
+    <script src="jsQR.js" defer></script>
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="app" aria-live="polite">
+      <main class="loading-screen">
+        <div class="brand-mark">CE</div>
+        <strong>Carregando o ConfirmaEdu…</strong>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript>Ative o JavaScript para utilizar o ConfirmaEdu.</noscript>
+  </body>
+</html>
