@@ -158,10 +158,10 @@ function normalizeIdentifier(value) {
     .replace(/\.{2,}/g, ".")
     .replace(/^[.-]+|[.-]+$/g, "");
 }
+
 function accountEmail(identifier) {
   const projectHost = new URL(appConfig.SUPABASE_URL).hostname;
   return `${normalizeIdentifier(identifier)}@${projectHost}`;
-}
 }
 
 function roleLabel(role) {
@@ -175,7 +175,7 @@ function applyTheme() {
 }
 
 function brand() {
-  return `<div class="brand"><span class="brand-mark">CE</span><span>Confirma<span>Edu</span></span></div>`;
+  return `<div class="brand"><img class="brand-logo" src="confirmaedu-logo.png" alt="ConfirmaEdu"></div>`;
 }
 
 function themeButton() {
@@ -217,7 +217,7 @@ function render() {
 }
 
 function renderLoading() {
-  return `<main class="loading-screen"><div class="brand-mark">CE</div><strong>Carregando o ConfirmaEdu…</strong></main>`;
+  return `<main class="loading-screen"><div class="brand brand-loading"><img class="brand-logo" src="confirmaedu-logo.png" alt="ConfirmaEdu"></div><strong>Carregando o ConfirmaEdu…</strong></main>`;
 }
 
 function renderSetup() {
