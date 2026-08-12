@@ -178,6 +178,10 @@ function brand() {
   return `<div class="brand"><img class="brand-logo" src="confirmaedu-logo.png" alt="ConfirmaEdu"></div>`;
 }
 
+function schoolBadge() {
+  return `<span class="school-symbol school-logo"><img src="escola-antonio-dantas.png" alt="Brasão da Escola Estadual Professor Antônio Dantas"></span>`;
+}
+
 function themeButton() {
   const label = ui.theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro";
   return `<button class="icon-button" data-action="toggle-theme" title="${label}" aria-label="${label}">${ui.theme === "dark" ? "☀" : "☾"}</button>`;
@@ -223,7 +227,7 @@ function renderLoading() {
 function renderSetup() {
   return `<main class="login-page">
     <header class="login-topbar">${brand()}${themeButton()}</header>
-    <section class="login-stage"><div class="login-panel"><div class="school-heading"><span class="school-symbol">▦</span><p>Configuração inicial</p><h1>Conecte o banco de dados</h1><span>Abra o arquivo GUIA-RAPIDO.md e siga os passos indicados.</span></div>
+    <section class="login-stage"><div class="login-panel"><div class="school-heading">${schoolBadge()}<p>Configuração inicial</p><h1>Conecte o banco de dados</h1><span>Abra o arquivo GUIA-RAPIDO.md e siga os passos indicados.</span></div>
     <article class="login-card setup-card"><span class="stat-icon orange">!</span><h2>Falta conectar o Supabase</h2><p>Preencha o arquivo <strong>config.js</strong> com a URL e a chave pública do projeto.</p><div class="local-box"><span>1</span><div><strong>Você só fará isso uma vez</strong><p>Depois de configurado, esta tela desaparece.</p></div></div></article></div></section>
   </main>`;
 }
@@ -258,7 +262,7 @@ function renderLogin() {
       </form>
       <button class="auth-switch" type="button" data-action="show-register">Primeiro acesso? <strong>Criar cadastro</strong></button>`;
 
-  return `<main class="login-page"><header class="login-topbar">${brand()}${themeButton()}</header><section class="login-stage"><div class="login-panel"><div class="school-heading"><span class="school-symbol">▦</span><p>Escola Estadual</p><h1>Professor Antônio Dantas</h1><span>Controle de refeições escolares</span></div><div class="login-card">${cardContent}</div></div></section></main>`;
+  return `<main class="login-page"><header class="login-topbar">${brand()}${themeButton()}</header><section class="login-stage"><div class="login-panel"><div class="school-heading">${schoolBadge()}<p>Escola Estadual</p><h1>Professor Antônio Dantas</h1><span>Controle de refeições escolares</span></div><div class="login-card">${cardContent}</div></div></section></main>`;
 }
 
 function renderPending() {
